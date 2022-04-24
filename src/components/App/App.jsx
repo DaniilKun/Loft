@@ -2,6 +2,7 @@ import { Header } from '../Header/Header'
 import { Category } from '../Category/Category'
 import './App.css'
 import { Slider } from '../Slider/Slider'
+import { Product } from '../Product/Product'
 
 export function App() {
   return (
@@ -10,6 +11,8 @@ export function App() {
       <div className="container">
         <Category />
         <Slider/>
+        <Product/>
+
       </div>
     </div>
   )
