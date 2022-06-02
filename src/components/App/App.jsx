@@ -1,14 +1,22 @@
-import { Header } from '../Header/Header'
-import { Category } from '../Category/Category'
-import './App.css'
+import './App.scss'
+import { Route, Routes } from 'react-router-dom'
+import { PageCard } from '../../page/PageCard/PageCard'
+import { MainLayoit } from '../../layout/MainLayoit'
+import { PageHome } from '../../page/PageHome/PageHome'
 
 export function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="container">
-        <Category />
-      </div>
+      <MainLayoit>
+        <div className="main">
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<PageHome />} />
+              <Route path="/products/:id" element={<PageCard />} />
+            </Routes>
+          </div>
+        </div>
+      </MainLayoit>
     </div>
   )
 }
